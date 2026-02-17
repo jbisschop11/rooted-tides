@@ -1,0 +1,42 @@
+---
+const { calendlyUrl, label = "Book a Session" } = Astro.props;
+---
+<button class="btn primary" type="button" data-calendly-popup>{label}</button>
+
+<script is:inline>
+  (function () {
+    const calendlyUrl = "https://calendly.com/jbisschop11/60-minute-reiki-session";
+
+    async function ensureCalendlyLoaded() {
+      if (window.Calendly) return;
+
+      if (!document.querySelector('link[href="https://assets.calendly.com/assets/external/widget.css"]')) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "https://assets.calendly.com/assets/external/widget.css";
+        document.head.appendChild(link);
+      }
+
+      await new Promise((resolve) => {
+        if (document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) return resolve();
+        const s = document.createElement("script");
+        s.src = "https://assets.calendly.com/assets/external/widget.js";
+        s.async = true;
+        s.onload = resolve;
+        document.body.appendChild(s);
+      });
+    }
+
+    document.addEventListener("click", async (e) => {
+      const btn = e.target.closest("[data-calendly-popup]");
+      if (!btn) return;
+      e.preventDefault();
+      await ensureCalendlyLoaded();
+      window.Calendly.initPopupWidget({ url: calendlyUrl });
+    });
+  })();
+</script>
+
+<style>
+  /* component inherits .btn styles */
+</style>

@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CalendlyInlineEmbed from "../components/CalendlyInlineEmbed.astro";
+const CALENDLY = "https://calendly.com/jbisschop11/60-minute-reiki-session";
+---
+<BaseLayout
+  title="Book | Rooted Tides"
+  description="Book a 60-minute Reiki session in West Hants County, Nova Scotia."
+  canonical="/book"
+>
+  <div class="container section">
+    <h1>Book a Session</h1>
+    <p class="small">
+      Choose a time that works for you. You’ll receive a confirmation email right after booking,
+      including <strong>exact location details</strong>, directions, and preparation notes.
+    </p>
+
+    <div style="margin-top:18px;">
+      <CalendlyInlineEmbed calendlyUrl={CALENDLY} height={860} />
+    </div>
+
+    <div class="card" style="padding:18px; margin-top:18px;">
+      <h2 style="margin-bottom:6px;">What to know</h2>
+      <ul class="small" style="margin:0; padding-left:18px;">
+        <li>Sessions are <strong>60 minutes</strong> and offered <strong>in-person</strong> in West Hants County.</li>
+        <li>You’ll stay fully clothed and comfortable.</li>
+        <li>If you have questions before booking, visit the <a href="/contact" style="text-decoration:underline; text-underline-offset:2px;">Contact</a> page.</li>
+      </ul>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,21 @@
+---
+import CalendlyPopupButton from "./CalendlyPopupButton.astro";
+const CALENDLY = "https://calendly.com/jbisschop11/60-minute-reiki-session";
+---
+<header class="header">
+  <div class="container headerInner">
+    <a href="/" class="brand" aria-label="Rooted Tides home">
+      <strong>Rooted Tides</strong>
+      <span>Reiki • West Hants, Nova Scotia</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/expect">What to Expect</a>
+      <a href="/contact">Contact</a>
+      <a href="/book" class="btn">View Calendar</a>
+      <CalendlyPopupButton calendlyUrl={CALENDLY} label="Book" />
+    </nav>
+  </div>
+</header>
