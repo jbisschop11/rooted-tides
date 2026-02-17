@@ -85,3 +85,13 @@ p{ line-height: 1.75; margin: 0 0 12px; }
   font-size: .95rem;
 }
 .footer a{ text-decoration: underline; text-underline-offset: 2px; }
+.badge{
+  display:inline-flex;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  background: rgba(255,255,255,.65);
+  backdrop-filter: blur(8px);
+  font-size: .92rem;
+}
