@@ -13,11 +13,18 @@ const CALENDLY = "https://calendly.com/jbisschop11/60-minute-reiki-session";
     <div class="container heroWrap">
       <div>
         <div class="kicker">In-person Reiki • West Hants County</div>
-        <h1>Rooted, calming care—like a deep exhale.</h1>
-        <p class="small">
-          Rooted Tides offers gentle Reiki sessions that support rest, grounding, and nervous system ease.
-          Book a 60-minute session online and receive exact location details in your confirmation email.
-        </p>
+      <h1 style="margin-top:10px;">Rooted Tides</h1>
+      <p class="small" style="font-size:1.05rem; max-width:42rem;">
+      High-touch calm for modern life. Gentle Reiki sessions designed to help you downshift, soften, and feel deeply grounded.
+</p>
+
+<div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; align-items:center;">
+  <CalendlyPopupButton calendlyUrl={CALENDLY} label="Book a Session" />
+  <a href="/book" class="small" style="text-decoration:underline; text-underline-offset:4px;">
+    View the calendar
+  </a>
+</div>
+
 
         <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
           <CalendlyPopupButton calendlyUrl={CALENDLY} label="Book a Session" />
