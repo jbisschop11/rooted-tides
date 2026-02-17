@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CalendlyPopupButton from "../components/CalendlyPopupButton.astro";
+const CALENDLY = "https://calendly.com/jbisschop11/60-minute-reiki-session";
+---
+<BaseLayout
+  title="Contact | Rooted Tides"
+  description="Contact Rooted Tides Reiki in West Hants County, Nova Scotia."
+  canonical="/contact"
+>
+  <div class="container section">
+    <h1>Contact</h1>
+    <p class="small">Have a question before booking? I’d be happy to hear from you.</p>
+
+    <div class="grid grid-2" style="margin-top:22px;">
+      <div class="card" style="padding:22px;">
+        <h2>Email</h2>
+        <p class="small">
+          <a href="mailto:jbisschop11@gmail.com" style="text-decoration:underline; text-underline-offset:2px;">jbisschop11@gmail.com</a>
+        </p>
+
+        <h2 style="margin-top:20px;">Location</h2>
+        <p class="small">
+          Rooted Tides offers in-person Reiki sessions in <strong>West Hants County, Nova Scotia</strong>.
+        </p>
+        <p class="small">
+          For privacy and simplicity, <strong>exact location details are shared after booking</strong>
+          in your confirmation email.
+        </p>
+
+        <h2 style="margin-top:20px;">Policies</h2>
+        <ul class="small" style="margin:0; padding-left:18px;">
+          <li><strong>Consent:</strong> Hands-on or hands-near is always your choice.</li>
+          <li><strong>Arrival:</strong> Please arrive a few minutes early to settle in.</li>
+          <li><strong>Rescheduling:</strong> Use the link in your booking email.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="padding:22px;">
+        <h2>Ready to book?</h2>
+        <p class="small">Choose a time that works for you. You’ll receive:</p>
+
+        <ul class="small" style="padding-left:18px; margin-top:8px;">
+          <li>A confirmation email</li>
+          <li>Exact address + directions</li>
+          <li>Preparation notes</li>
+          <li>Easy rescheduling options</li>
+        </ul>
+
+        <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+          <CalendlyPopupButton calendlyUrl={CALENDLY} label="Book a Reiki Session" />
+          <a class="btn" href="/book">View Calendar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

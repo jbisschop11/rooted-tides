@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CalendlyPopupButton from "../components/CalendlyPopupButton.astro";
+const CALENDLY = "https://calendly.com/jbisschop11/60-minute-reiki-session";
+
+const single = 95;
+const pkg = (n) => (n * single * 0.9).toFixed(2);
+---
+<BaseLayout
+  title="Services | Rooted Tides"
+  description="Reiki sessions and discounted packages in West Hants County, Nova Scotia."
+  canonical="/services"
+>
+  <div class="container section">
+    <h1>Services & Packages</h1>
+    <p class="small">In-person Reiki sessions in West Hants County, Nova Scotia.</p>
+
+    <div class="grid grid-2" style="margin-top:22px;">
+      <div class="card" style="padding:22px;">
+        <h2>60-Minute Reiki Session</h2>
+        <p class="small">
+          A full session with a brief check-in, Reiki treatment, and time to re-ground before you leave.
+        </p>
+        <p style="font-size:1.6rem; margin:14px 0 18px;"><strong>${single} CAD</strong></p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <CalendlyPopupButton calendlyUrl={CALENDLY} label="Book a Session" />
+          <a class="btn" href="/book">View Calendar</a>
+        </div>
+        <p class="small" style="margin-top:12px;">
+          Exact location details are shared after booking.
+        </p>
+      </div>
+
+      <div class="card" style="padding:22px;">
+        <h2>Packages (10% off)</h2>
+        <p class="small">Best for ongoing support and building a steady rhythm of care.</p>
+
+        <div style="display:grid; gap:12px; margin-top:14px;">
+          <div class="card" style="padding:14px; border-radius:14px;">
+            <strong>3 × 60 min</strong> <span class="small">— ${pkg(3)} CAD</span>
+          </div>
+          <div class="card" style="padding:14px; border-radius:14px;">
+            <strong>5 × 60 min</strong> <span class="small">— ${pkg(5)} CAD</span>
+          </div>
+          <div class="card" style="padding:14px; border-radius:14px;">
+            <strong>10 × 60 min</strong> <span class="small">— ${pkg(10)} CAD</span>
+          </div>
+        </div>
+
+        <p class="small" style="margin-top:14px;">
+          Packages include a 10% discount compared to single sessions. Book at your pace.
+        </p>
+
+        <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+          <CalendlyPopupButton calendlyUrl={CALENDLY} label="Book a Session" />
+          <a class="btn" href="/contact">Ask about packages</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="padding-bottom:0;">
+      <div class="card" style="padding:22px;">
+        <h2>Lineage</h2>
+        <p class="small">
+          Rooted Tides follows the traditional <strong>Usui Shiki Ryoho</strong> healing system, stemming from the lineage of
+          <strong>Reiki Master Mikao Usui</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

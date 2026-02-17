@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CalendlyPopupButton from "../components/CalendlyPopupButton.astro";
+
+const CALENDLY = "https://calendly.com/jbisschop11/60-minute-reiki-session";
+---
+<BaseLayout
+  title="Rooted Tides | Reiki in West Hants, Nova Scotia"
+  description="Earthy, calming Reiki sessions in West Hants County, Nova Scotia. Book online with ease."
+  canonical="/"
+>
+  <section class="hero">
+    <div class="container heroWrap">
+      <div>
+        <div class="kicker">In-person Reiki • West Hants County</div>
+        <h1>Rooted, calming care—like a deep exhale.</h1>
+        <p class="small">
+          Rooted Tides offers gentle Reiki sessions that support rest, grounding, and nervous system ease.
+          Book a 60-minute session online and receive exact location details in your confirmation email.
+        </p>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
+          <CalendlyPopupButton calendlyUrl={CALENDLY} label="Book a Session" />
+          <a class="btn" href="/book">View Calendar</a>
+          <a class="btn" href="/services">View Packages</a>
+        </div>
+
+        <div class="badges">
+          <div class="badge">60-minute sessions</div>
+          <div class="badge">Packages (10% off)</div>
+          <div class="badge">Traditional Usui Shiki Ryoho lineage</div>
+        </div>
+      </div>
+
+      <div>
+        <img class="heroImg" src="/images/sarah-harbor.jpg" alt="Sarah outdoors by the Nova Scotia waterfront with her dog." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card" style="padding:22px;">
+          <h2>What is Reiki?</h2>
+          <p class="small">
+            Reiki is a gentle, hands-on (or hands-near) energy healing practice that invites deep relaxation.
+            Sessions are quiet, calming, and tailored to what you need that day.
+          </p>
+        </div>
+
+        <div class="card" style="padding:22px;">
+          <h2>Why people book</h2>
+          <ul class="small" style="margin:0; padding-left:18px;">
+            <li>Stress relief and deep rest</li>
+            <li>Feeling grounded and present</li>
+            <li>Support through busy or emotional seasons</li>
+            <li>A gentle reset for body and mind</li>
+          </ul>
+          <p class="small" style="margin-top:10px;">
+            Reiki is complementary wellness support and not a substitute for medical care.
+          </p>
+        </div>
+
+        <div class="card" style="padding:22px;">
+          <h2>Simple online booking</h2>
+          <p class="small">
+            Choose a time that works for you. You’ll receive a confirmation email with
+            exact location details, directions, and preparation notes.
+          </p>
+          <div style="margin-top:12px;">
+            <CalendlyPopupButton calendlyUrl={CALENDLY} label="Book Now" />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-2" style="margin-top:18px;">
+        <div class="card" style="padding:22px;">
+          <h2>Meet Sarah</h2>
+          <p class="small">
+            Rooted Tides is guided by an earthy, grounded approach to healing and rest.
+            Sarah practices within the traditional <strong>Usui Shiki Ryoho</strong> healing system,
+            stemming from the lineage of <strong>Reiki Master Mikao Usui</strong>.
+          </p>
+          <a class="btn" href="/about">Read Sarah’s story</a>
+        </div>
+
+        <div class="card" style="padding:0; overflow:hidden;">
+          <img src="/images/sarah-garden.jpg" alt="Sarah smiling outdoors under green leaves." style="width:100%; height:320px; object-fit:cover; display:block;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="card" style="padding:22px;">
+        <h2>Ready to feel more rooted?</h2>
+        <p class="small">Book your first session online in under a minute.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <CalendlyPopupButton calendlyUrl={CALENDLY} label="Book a Reiki Session" />
+          <a class="btn" href="/expect">What to expect</a>
+          <a class="btn" href="/contact">Questions? Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
